@@ -30,17 +30,17 @@ install:
   #- ECHO "Notepad location "
   #- ps: "ls C:\\Windows\\System32\\notepad.exe"
 
-   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
 
-   # Install the build dependencies of the project.
-   - "%CMD_IN_ENV% pip install -r dev-requirements.txt"
+  # Install the build dependencies of the project.
+  - "%CMD_IN_ENV% pip install -r dev-requirements.txt"
 
-   # Install pywinauto from the trunk
-   - "%CMD_IN_ENV% pip install -e git+https://github.com/pywinauto/pywinauto.git@master#egg=pywinauto-trunk"
-   # - "%CMD_IN_ENV% pip install -e git+https://github.com/pywinauto/pywinauto.git@5b2b8a6082cc14154b32a94178c11a4c3a574701#egg=pywinauto"
+  # Install pywinauto from the trunk
+  - "%CMD_IN_ENV% pip install -e git+https://github.com/pywinauto/pywinauto.git@master#egg=pywinauto-trunk"
+  # - "%CMD_IN_ENV% pip install -e git+https://github.com/pywinauto/pywinauto.git@5b2b8a6082cc14154b32a94178c11a4c3a574701#egg=pywinauto"
 
-   # Print python modules
-   - "%CMD_IN_ENV% pip freeze"
+  # Print python modules
+  - "%CMD_IN_ENV% pip freeze"
 
 build: off  # disable automatic builds
 

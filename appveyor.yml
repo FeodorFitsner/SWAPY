@@ -23,6 +23,7 @@ environment:
 #  - unstable # Unstable worker image with logged in user, desktop and interactive build agent
 
 install:
+  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-desktop.ps1'))
   # Some listings for debug only
   #- ECHO "Filesystem root:"
   #- ps: "ls \"C:/\""
